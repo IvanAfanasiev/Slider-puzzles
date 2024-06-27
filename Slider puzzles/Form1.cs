@@ -4,11 +4,12 @@ using System.Windows.Forms;
 
 namespace Slider_puzzles
 {
-    public partial class Form1 : Form
+    public partial class MainMenu : Form
     {
         Image currentImage;
+        int fieldSize = 3;
 
-        public Form1()
+        public MainMenu()
         {
             InitializeComponent();
             LoadImages();
@@ -62,6 +63,7 @@ namespace Slider_puzzles
             GameForm gameForm = new GameForm();
             gameForm.Location = this.Location;
             gameForm.currentImage = currentImage;
+            gameForm.fieldSize = fieldSize;
             gameForm.Setup();
             gameForm.Show();
         }
@@ -83,6 +85,21 @@ namespace Slider_puzzles
             imageList.Images.Add(newImage);
             flowLayoutPanel.Controls.Clear();
             BuildImagesList();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            fieldSize = 2;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            fieldSize = 3;
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            fieldSize = 4;
         }
     }
 }
