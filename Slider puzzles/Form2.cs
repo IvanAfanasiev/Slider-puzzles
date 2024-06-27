@@ -10,6 +10,7 @@ namespace Slider_puzzles
         bool isWin = false;
         int time = 0;
         int moves = 0;
+        Image finalPart;
         public Image currentImage;
         public Image emptyImage;
         int emptySlotIndx;
@@ -67,6 +68,7 @@ namespace Slider_puzzles
                 field[j] = field[i];
                 field[i] = tmpInt;
             }
+            finalPart = imageList.Images[(int)Math.Pow(fieldSize, 2) - 1];
             imageList.Images[(int)Math.Pow(fieldSize, 2) - 1] = emptyImage;
             DrawField();
         }
@@ -112,8 +114,6 @@ namespace Slider_puzzles
 
             emptySlotIndx = imgIndx;
 
-            DrawField();
-
             moves++;
             movesLabel.Text = "moves: " + moves;
 
@@ -124,7 +124,9 @@ namespace Slider_puzzles
                 menu_button.Visible = true;
                 restart_button.Visible = true;
                 backButton.Visible = false;
+                imageList.Images[emptySlotIndx] = finalPart;
             }
+            DrawField();
         }
 
         bool IsWin()
