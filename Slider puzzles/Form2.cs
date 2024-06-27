@@ -14,8 +14,8 @@ namespace Slider_puzzles
         public Image emptyImage;
         int emptySlotIndx;
         public int fieldSize = 3;
-        int[] field = new int[16];
-        int[] answer = new int[16];
+        int[] field = new int[25];
+        int[] answer = new int[25];
 
         public GameForm()
         {

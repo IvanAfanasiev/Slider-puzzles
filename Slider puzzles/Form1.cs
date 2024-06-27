@@ -87,11 +87,6 @@ namespace Slider_puzzles
             BuildImagesList();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            fieldSize = 2;
-        }
-
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             fieldSize = 3;
@@ -100,6 +95,12 @@ namespace Slider_puzzles
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             fieldSize = 4;
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+            fieldSize = 5;
+
         }
     }
 }
