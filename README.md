@@ -1,7 +1,10 @@
 <h1 align="center">Slider puzzles</h1>
 Slider puzzle is an application on Windows Forms (.NET Framework), is a game of "The 15 puzzle" (or "Magic 15"). 
+<br>
+<br>
 
 <b>Gameplay:</b>
+<br>
 When launching the application,
 the <b>main menu</b> will appear in front of the player. 
 - In this menu, you can select one of the seven default images, as well as <b>upload your own.</b> The uploaded image will appear at the end of the list of all available images. When you click on the image, the selected image will be shown on the left, next to the inscription "chosen image".
